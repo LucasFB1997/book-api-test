@@ -92,3 +92,10 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 3. On rajoute une petite ligne dans le fichier README.md (ex:"API qui liste des livres)
 4. On fait un commit
 5. On push sur github
+
+## Exercice N°6 ##
+
+1. Lancer la commande `npm init`
+2. Renseigner dans "entry point" le chemin `src/index.js`
+3. Ajouter la ligne "type": "module", après la clefs `main` dans le `package.json`
+4. Faire un commit et pousser sur github
