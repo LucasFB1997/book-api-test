@@ -6,7 +6,7 @@ import fastify from "fastify"
 const app = fastify({ logger: true })
 
 // On créé une route fastify sur l'URI "/"
-const route = app.get("/", async () => {
+const route = app.get("/Bienvenue", async () => {
     return "Bienvenue sur notre librairie en ligne ! Nous apprenons pour le moment à faire des API."
 })
 
