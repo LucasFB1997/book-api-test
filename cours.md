@@ -68,7 +68,7 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 - `npm i fastify --save` ou `yarn add fastify` pour installer fastify
 - Pour ne pas versionner le "node_modules", il faut gréer un fichier ".gitignore" et écrire les fichiers/dossiers que l'on ne veut pas versionner
 - Pour arrêter un server démarré, il faut dans le terminal taper "ctrl + c"
-
+- Il faut installer le package mongodb avec la commande `yarn add fastify-mongodb`
 
 
 ######
@@ -153,3 +153,10 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 1. Dans `src/index.js` ajouter une route get avec le chemin `/` et retourner un objet json de votre choix
 2. Vous pouvez tester en démarrant votre server (si déjà lancé vous pouvez l'arrêter avec la touche Ctrl-C dans votre terminal, pour lancer le server faire `yarn start`).
 3. On commit et on push
+
+## Exercice N°11 : Installer fastify mongodb extension ##
+
+1. Installer le paquet : `fastify-mongodb` avec la commande `yarn add fastify-mongodb`
+2. Configurer fastify mongo dans le fichier `index.js` (Vous pouvez utiliser l'url: `mongodb+srv://MyTodoApp:MyTodoApp@cluster0.obacx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
+3. Vous pouvez tester en lancant votre server (faire Ctrl-C pour stopper le server si il est en route, pour lancer le server la commande est `yarn start`)
+4. On commit et on push sur github
