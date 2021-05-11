@@ -1,1 +1,20 @@
-console.log('Bonjour, je m\'appelle Lucas. Je suis un cours sur les API')
+// On importe la librairie "fastify"
+import fastify from "fastify"
+
+// On créé une application fastify en utilisant l'import de notre librairie
+// On configure fastify pour afficher des logs
+const app = fastify({ logger: true })
+
+// Cette fonction démare notre serveur d'API
+const start = async () => {
+
+    console.log("Lancement du serveur")
+
+    await app.listen(3000)
+
+    console.log("Le serveur est lancé, vous pouvez visiter: http://localhost:3000")
+
+}
+
+// Lancement de la fonction de démarrage
+start();

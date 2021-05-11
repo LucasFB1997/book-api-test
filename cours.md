@@ -55,11 +55,23 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 
 
 ## Notes sur le cours ##
+-- Partie sur la configuration de notre page web --
+
 - Dans le `package.json` on peut créer autant de script que l'on veut pour tester le bon fonctionnement de notre code
 - La commande `yarn` fonctionne de la même manière que la commande `npm`
+
+
+
+-- Partie sur l'installation de l'API fastify et son utilisation --
+
 - Fastify == Permet de faire des API de façon très simple ("https://www.fastify.io/docs/latest/Getting-Started/")
 - `npm i fastify --save` ou `yarn add fastify` pour installer fastify
 - Pour ne pas versionner le "node_modules", il faut gréer un fichier ".gitignore" et écrire les fichiers/dossiers que l'on ne veut pas versionner
+- Pour arrêter un server démarré, il faut dans le terminal taper "ctrl + c"
+
+
+
+######
 
 
 
@@ -102,14 +114,14 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 4. On fait un commit
 5. On push sur github
 
-## Exercice N°6 API ##
+## Exercice N°6 : API initialisation ##
 
 1. Lancer la commande `npm init`
 2. Renseigner dans "entry point" le chemin `src/index.js`
 3. Ajouter la ligne "type": "module", après la clefs `main` dans le `package.json`
 4. Faire un commit et pousser sur github
 
-## Exercice N°7 API ##
+## Exercice N°7 : Création fichier index.js ##
 
 1. Créer le fichier `src/index.js` avec un console.log
 2. Ajouter un script dans `package.json` avec la configuration suivante :
@@ -129,3 +141,9 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
     1. Créer un fichier `.gitignore` à la racine du projet
     2. Ajouter la ligne `node_modules` dans le fichier `.gitignore`
 3. On commit et push sur github
+
+## Exercice N°9 : Lancer un server fastify ##
+
+1. Dans `index.js` ajouter le code permettant de démarrer un server sur le port 3000
+2. Vous pouvez lancer la commande `yarn start` pour tester votre server (vous pouvez appuyer sur Ctrl-C afin de quitter le server)
+3. On commit et on push 
