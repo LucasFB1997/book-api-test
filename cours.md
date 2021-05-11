@@ -54,6 +54,11 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 
 
 
+## Notes sur le cours ##
+- Dans le `package.json` on peut créer autant de script que l'on veut pour tester le bon fonctionnement de notre code
+
+
+
 ## Exercice N°1 GIT ##
 
 - Créer un répertoire "MonProjet" sur votre bureau
@@ -99,3 +104,16 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 2. Renseigner dans "entry point" le chemin `src/index.js`
 3. Ajouter la ligne "type": "module", après la clefs `main` dans le `package.json`
 4. Faire un commit et pousser sur github
+
+## Exercice N°7 ##
+
+1. Créer le fichier `src/index.js` avec un console.log
+2. Ajouter un script dans `package.json` avec la configuration suivante :
+```js
+"script": {
+    "start":"node src/index.js"
+}
+```
+
+3. Vous pouvez tester en lancant la commande `yarn start` ou bien `npm start`
+4. Faire un commit et "push" sur github

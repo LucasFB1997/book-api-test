@@ -1,0 +1,1 @@
+console.log('Bonjour, je m\'appelle Lucas. Je suis un cours sur les API')
