@@ -61,7 +61,6 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 - La commande `yarn` fonctionne de la même manière que la commande `npm`
 
 
-
 **Partie sur l'installation de l'API fastify et son utilisation**
 
 - Fastify == Permet de faire des API de façon très simple ("https://www.fastify.io/docs/latest/Getting-Started/")
@@ -69,6 +68,11 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 - Pour ne pas versionner le "node_modules", il faut gréer un fichier ".gitignore" et écrire les fichiers/dossiers que l'on ne veut pas versionner
 - Pour arrêter un server démarré, il faut dans le terminal taper "ctrl + c"
 - Il faut installer le package mongodb avec la commande `yarn add fastify-mongodb`
+
+
+**Partie sur l'installation de `nodemon`**
+
+- Dans le terminal entrer la commande `yarn add nodemon`, cela permettra de ne pas avoir à redémarrer le server à chaque modification
 
 
 ######
@@ -168,3 +172,9 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 3. On récupère tous les livres de notre collection
 4. On retourne les livres
 5. On commit et on push
+
+## Exercice N°13 : Installer et mettre en place nodemon ##
+
+1. Installer nodemon avec la commande `yarn add nodemon`
+2. Modifier le script `start` dans le `package.json` pour utiliser nodemon
+3. On commit et on push
