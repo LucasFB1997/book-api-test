@@ -3,3 +3,17 @@ GET http://localhost:3000/bienvenue
 ###
 
 GET http://localhost:3000/books
+
+###
+
+POST http://localhost:3000/books
+Content-type: application/json
+
+{
+    "title": "Tintin au Tibet",
+    "description": "Ceci est la description d'un livre fantastique",
+    "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F_ZfSiy2A9mow%2FTQLJlM2IiZI%2FAAAAAAAACzc%2FpUQruBA_LVw%2Fs1600%2FTinTin%2Bin%2BTibet%2Bfront%2Bcover.jpg&f=1&nofb=1",
+    "price": 17.5,
+    "author": "Georges Remi",
+    "stars": 5
+}

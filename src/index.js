@@ -37,7 +37,28 @@ app.get("/books", async () => {
 
     // On retourne les livres de notre base de donnée, dans la constante sous forme de tableau "books"
     return books
-    
+
+})
+
+
+// on créé une route qui nous permettra d'ajouter (de créer) un nouveau livre
+app.post('/books', async (request) => {
+
+    // Nous récupérons toutes les données qu'il y a dans le corps d'une requête. Cela correspond à notre livre
+    const book = request.body
+
+    // Pour enregistrer le livre dans ma BDD (mongodb)
+    // J'ai besoin de la collection
+    const collection = app.mongo.db.collection('books')
+
+    // On enregistre le livre dans la base de donnée
+    const result = await collection.insertOne(book)
+
+    console.log(result)
+
+    // On retourne le livre qui a été enregistrer dans la BDD
+    return result.ops[0]
+
 })
 
 

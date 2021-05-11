@@ -187,3 +187,12 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 4. Ecrire une requête GET sur `http://localhost/books` (Requêtes séparer par 3 hashtag "###")
 5. Vous pouvez tester en appuyant sur "Send Request" au dessus de votre requête.
 6. On commit et on push sur github
+
+## Exercice N°15 : Création d'un livre ##
+
+1. On créé une route fastify `POST /books`
+2. On récupère les données de la requête en utilisant `request.body`
+3. On récupère la collection `books` depuis mongodb
+4. On insère le livre dans la base de donnée
+5. On retourne le livre qui a été enregistré dans la base de donnée
+6. On commit et on push
