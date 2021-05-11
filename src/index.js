@@ -41,8 +41,36 @@ app.get("/books", async () => {
 })
 
 
+// On déclare un schéma qui nous permettra de valider les données envoyées dans les requêtes POST / GET
+const createBookSchema = {
+    type: 'object',
+    // On définie les propriétés
+    properties: {
+        title: { type: 'string' },
+        description: { type: 'text' },
+        image: { type: 'string' },
+        author: { type: 'string' },
+        price: { type: 'number' },
+        stars: { type: 'number' }
+    },
+    // Les propiétés obligatoire pour la validation
+    required: [
+        'title',
+        'description',
+        'image',
+        'author',
+        'price',
+        'stars'
+    ]
+}
+
+
 // on créé une route qui nous permettra d'ajouter (de créer) un nouveau livre
-app.post('/books', async (request) => {
+app.post('/books', {
+    schema: { // On ajoute notre schema sur notre fonction de création
+        body: createBookSchema
+    }
+}, async (request) => {
 
     // Nous récupérons toutes les données qu'il y a dans le corps d'une requête. Cela correspond à notre livre
     const book = request.body

@@ -196,3 +196,9 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 4. On insère le livre dans la base de donnée
 5. On retourne le livre qui a été enregistré dans la base de donnée
 6. On commit et on push
+
+## Exercice N°16 : Attacher un schéma de validation ##
+
+1. Dans le fichier `src/index.js` ajouter le schéma `createBookShema`
+2. Attacher le schéma à la route `POST /books`
+3. On commit et on push sur github
