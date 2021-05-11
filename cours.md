@@ -160,3 +160,11 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 2. Configurer fastify mongo dans le fichier `index.js` (Vous pouvez utiliser l'url: `mongodb+srv://MyTodoApp:MyTodoApp@cluster0.obacx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
 3. Vous pouvez tester en lancant votre server (faire Ctrl-C pour stopper le server si il est en route, pour lancer le server la commande est `yarn start`)
 4. On commit et on push sur github
+
+## Exercice N°12 : Retourner tous les livres d'une BDD ##
+
+1. Créer la route `/books`
+2. On récupère la collection "books" depuis mongodb
+3. On récupère tous les livres de notre collection
+4. On retourne les livres
+5. On commit et on push
