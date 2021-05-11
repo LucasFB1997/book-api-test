@@ -41,6 +41,22 @@ app.get("/books", async () => {
 })
 
 
+// On créé une route qui retourne qu'un livre par son identifiant
+app.get('/books/:id', async (request) => {
+    // On récupère l'identifiant rentré dans notre URL
+    const id = request.params.id
+
+    // On récupère notre collection mongodb
+    const collection = app.mongo.db.collection('books')
+
+    // On va chercher un seul livre par son ID
+    const book = await collection.findOne({ _id: new app.mongo.ObjectId(id) })
+
+    // On retourne notre livre
+    return book
+})
+
+
 // On déclare un schéma qui nous permettra de valider les données envoyées dans les requêtes POST / GET
 const createBookSchema = {
     type: 'object',

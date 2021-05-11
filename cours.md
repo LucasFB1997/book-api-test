@@ -202,3 +202,11 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 1. Dans le fichier `src/index.js` ajouter le schéma `createBookShema`
 2. Attacher le schéma à la route `POST /books`
 3. On commit et on push sur github
+
+## Exercice N°17 : Récupérer un seul livre ##
+
+1. Dans le fichier `src/index.js` ajouter une route `GET /book/:id`
+2. Récupérer le paramètre id depuis la route
+3. Récupérer le livre avec l'id depuis MongDB
+4. Retourner le livre
+5. On commit et on push
