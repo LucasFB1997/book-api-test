@@ -56,6 +56,7 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 
 ## Notes sur le cours ##
 - Dans le `package.json` on peut créer autant de script que l'on veut pour tester le bon fonctionnement de notre code
+- La commande `yarn` fonctionne de la même manière que la commande `npm`
 
 
 
