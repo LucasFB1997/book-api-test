@@ -178,3 +178,12 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 1. Installer nodemon avec la commande `yarn add nodemon`
 2. Modifier le script `start` dans le `package.json` pour utiliser nodemon
 3. On commit et on push
+
+## Exercice N°14 : Installer l'extension "Rest Client" ##
+
+1. Installer l'extension VSCode "Rest Client"
+2. Créer un fichier `api.http` à la racine du projet
+3. Ecrire une requête GET sur `http://localhost/bienvenue`
+4. Ecrire une requête GET sur `http://localhost/books` (Requêtes séparer par 3 hashtag "###")
+5. Vous pouvez tester en appuyant sur "Send Request" au dessus de votre requête.
+6. On commit et on push sur github
