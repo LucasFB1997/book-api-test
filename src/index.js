@@ -5,6 +5,11 @@ import fastify from "fastify"
 // On configure fastify pour afficher des logs
 const app = fastify({ logger: true })
 
+// On créé une route fastify sur l'URI "/"
+const route = app.get("/", async () => {
+    return "Bienvenue sur notre librairie en ligne ! Nous apprenons pour le moment à faire des API."
+})
+
 // Cette fonction démare notre serveur d'API
 const start = async () => {
 

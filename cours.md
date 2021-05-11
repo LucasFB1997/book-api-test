@@ -55,14 +55,14 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 
 
 ## Notes sur le cours ##
--- Partie sur la configuration de notre page web --
+**Partie sur la configuration de notre page web**
 
 - Dans le `package.json` on peut créer autant de script que l'on veut pour tester le bon fonctionnement de notre code
 - La commande `yarn` fonctionne de la même manière que la commande `npm`
 
 
 
--- Partie sur l'installation de l'API fastify et son utilisation --
+**Partie sur l'installation de l'API fastify et son utilisation**
 
 - Fastify == Permet de faire des API de façon très simple ("https://www.fastify.io/docs/latest/Getting-Started/")
 - `npm i fastify --save` ou `yarn add fastify` pour installer fastify
@@ -146,4 +146,10 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 
 1. Dans `index.js` ajouter le code permettant de démarrer un server sur le port 3000
 2. Vous pouvez lancer la commande `yarn start` pour tester votre server (vous pouvez appuyer sur Ctrl-C afin de quitter le server)
-3. On commit et on push 
+3. On commit et on push
+
+## Exercice N°10 : Afficher un text de bienvenue sur la route "`/`" ##
+
+1. Dans `src/index.js` ajouter une route get avec le chemin `/` et retourner un objet json de votre choix
+2. Vous pouvez tester en démarrant votre server (si déjà lancé vous pouvez l'arrêter avec la touche Ctrl-C dans votre terminal, pour lancer le server faire `yarn start`).
+3. On commit et on push
