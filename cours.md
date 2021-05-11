@@ -57,6 +57,9 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 ## Notes sur le cours ##
 - Dans le `package.json` on peut créer autant de script que l'on veut pour tester le bon fonctionnement de notre code
 - La commande `yarn` fonctionne de la même manière que la commande `npm`
+- Fastify == Permet de faire des API de façon très simple ("https://www.fastify.io/docs/latest/Getting-Started/")
+- `npm i fastify --save` ou `yarn add fastify` pour installer fastify
+- Pour ne pas versionner le "node_modules", il faut gréer un fichier ".gitignore" et écrire les fichiers/dossiers que l'on ne veut pas versionner
 
 
 
@@ -91,7 +94,7 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 7. Poussez le code sur github
 8. Faire une "pull request" sur github
 
-## Exercice N°5 ##
+## Exercice N°5 GIT/API ##
 
 1. Cloner le repository que vous venez de créer dans le répertoire
 2. On créé un fichier README.md à l'intérieur
@@ -99,14 +102,14 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 4. On fait un commit
 5. On push sur github
 
-## Exercice N°6 ##
+## Exercice N°6 API ##
 
 1. Lancer la commande `npm init`
 2. Renseigner dans "entry point" le chemin `src/index.js`
 3. Ajouter la ligne "type": "module", après la clefs `main` dans le `package.json`
 4. Faire un commit et pousser sur github
 
-## Exercice N°7 ##
+## Exercice N°7 API ##
 
 1. Créer le fichier `src/index.js` avec un console.log
 2. Ajouter un script dans `package.json` avec la configuration suivante :
@@ -118,3 +121,11 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 
 3. Vous pouvez tester en lancant la commande `yarn start` ou bien `npm start`
 4. Faire un commit et "push" sur github
+
+## Exercice N°8 : Installer Fastify ##
+
+1. On lance l'installation avec la commande `yarn add fastify` (vous pouvez vérifier l'installation en regardant `package.json`)
+2. On ignore le versionning du répertoire `node_modules` :
+    1. Créer un fichier `.gitignore` à la racine du projet
+    2. Ajouter la ligne `node_modules` dans le fichier `.gitignore`
+3. On commit et push sur github
