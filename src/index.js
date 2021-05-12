@@ -8,7 +8,7 @@ import fastifyMongo from 'fastify-mongodb'
 const app = fastify({ logger: true })
 
 
-// On connecte la base de donnée MongoDB
+// On connecte la base de donnée MongoDB grâce à un plugin
 app.register(fastifyMongo, {
 
     url: 'mongodb+srv://MyTodoApp:MyTodoApp@cluster0.obacx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
@@ -63,7 +63,7 @@ const createBookSchema = {
     // On définie les propriétés
     properties: {
         title: { type: 'string' },
-        description: { type: 'text' },
+        description: { type: 'string' },
         image: { type: 'string' },
         author: { type: 'string' },
         price: { type: 'number' },
