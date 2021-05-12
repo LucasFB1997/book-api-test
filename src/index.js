@@ -42,7 +42,7 @@ app.get("/books", async () => {
 
 
 // On créé une route qui retourne qu'un livre par son identifiant
-app.get('/books/:id', async (request) => {
+app.get('/books/:id', async (request, reply) => {
     // On récupère l'identifiant rentré dans notre URL
     const id = request.params.id
 
@@ -109,7 +109,7 @@ app.patch('/books/:id', async (request) => {
 
 
 // Suppression d'un livre
-app.delete('/books/:id', async (request) => {
+app.delete('/books/:id', async (request, reply) => {
 
     // Récupération de l'identifiant
     const id = request.params.id
