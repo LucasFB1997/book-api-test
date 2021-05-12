@@ -52,14 +52,26 @@ app.get('/books/:id', async (request) => {
     // On va chercher un seul livre par son ID
     try {
 
+        // Nous récupérons le livre avec l'id spécifié dans la route
         const book = await collection.findOne({ _id: new app.mongo.ObjectId(id) })
 
+        // Si il n'y a pas de livre, nous levons une erreur
+        if (!book) {
+
+            throw new Error('This books does not exists')
+
+        }
+
+        // Si tout c'est bien passé, on retourne le livre
         return book
 
     } catch(error) {
+     // Si la moindre erreur est survenue lors du "try" nous exécutons le code suivant :
 
+        // On change le status code par 404 (Not Found)
         reply.status(404)
 
+        // On retourne le message de l'erreur
         return { error: error.message }
 
     }
