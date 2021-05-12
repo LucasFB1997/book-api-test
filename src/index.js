@@ -185,9 +185,9 @@ const start = async () => {
 
     console.log("Lancement du serveur")
 
-    await app.listen(3000)
+    await app.listen(process.env.PORT)
 
-    console.log("Le serveur est lancé, vous pouvez visiter: http://localhost:3000")
+    console.log(`Le serveur est lancé, vous pouvez visiter: http://localhost:${process.env.PORT}`)
 
 }
 // Lancement de la fonction de démarrage

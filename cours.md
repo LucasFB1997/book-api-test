@@ -255,3 +255,9 @@ yarn install
 3. Lancer la fonction `config`
 4. Remplacer l'URL mongo db par notre valeur de configuration `process.env.MONGO_URL`
 5. On commit et on push
+
+## Exercice N°21 : Transforme le port en configuration ##
+
+1. Ajoutez la variable `PORT` dans le fichier `.env.dist` (vous pouvez aussi l'ajouter dans le fichier `.env`)
+2. Changer dans `src/index.js` le port server
+3. On commit et on push
