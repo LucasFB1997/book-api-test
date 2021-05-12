@@ -1,7 +1,8 @@
 // On importe la librairie "fastify"
 import fastify from "fastify"
 import fastifyMongo from 'fastify-mongodb'
-import config from 'dotenv'
+import { config } from 'dotenv'
+import fastifyCors from 'fastify-cors'
 
 config()
 
@@ -16,6 +17,9 @@ app.register(fastifyMongo, {
     url: process.env.MONGO_URL
 
 })
+
+// On enregistre le plugin CORS afin de pouvoir communiquer avec un client (ex: Une application React Native)
+app.register(fastifyCors)
 
 
 // On créé une route fastify sur l'URL "/bienvenue"

@@ -261,3 +261,10 @@ yarn install
 1. Ajoutez la variable `PORT` dans le fichier `.env.dist` (vous pouvez aussi l'ajouter dans le fichier `.env`)
 2. Changer dans `src/index.js` le port server
 3. On commit et on push
+
+## Exercice N°22 : Installer le plugin CORS ##
+
+1. Installer le plugin : `yarn add fastify-cors`
+2. Importer le plugin dans `src/index.js`
+3. On enregistre le plugin dans `src/index.js`
+4. On commit et push
