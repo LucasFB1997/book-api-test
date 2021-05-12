@@ -210,3 +210,11 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 3. Récupérer le livre avec l'id depuis MongDB
 4. Retourner le livre
 5. On commit et on push
+
+## Exercice N°18 : Mettre à jour et supprimer ##
+
+1. Dans le `src/index.js` écrire le code pour ces deux routes:
+    1. `PATCH /books/:id`
+    2. `DELETE /books/:id`
+2. Vous pouvez tester avec le fichier `api.http`
+3. On commit et on push

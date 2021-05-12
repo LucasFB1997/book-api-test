@@ -57,6 +57,53 @@ app.get('/books/:id', async (request) => {
 })
 
 
+// Création d'une route pour mettre à jour un livre
+app.patch('/books/:id', async (request) => {
+    // Pour mettre à jour un livre sur MongoDB, il faut utiliser : await collection.updateOne({ _id: new app.mongo.objectId(id) }, nouveauLivre)
+
+    // Récupération de l'identifiant
+    const id = request.params.id
+
+    // Récupérer le contenu du body
+    const book = request.body
+
+    // Récupération de la collection mongodb
+    const collection = app.mongo.db.collection('books')
+
+    // Chercher le livre à modifier
+    await collection.updateOne(
+        { _id: new app.mongo.ObjectId(id) }, 
+        { $set: book }
+    )
+
+    const updateBook = await collection.findOne(
+        { _id: new app.mongo.ObjectId(id) }
+    )
+
+    return updateBook
+
+})
+
+
+// Suppression d'un livre
+app.delete('/books/:id', async (request) => {
+
+    // Récupération de l'identifiant
+    const id = request.params.id
+
+    // Récupération de la collection mongodb
+    const collection = app.mongo.db.collection('books')
+
+    // Chercher le livre à modifier
+    await collection.deleteOne({
+        _id: new app.mongo.ObjectId(id) 
+    })
+
+    return null
+
+})
+
+
 // On déclare un schéma qui nous permettra de valider les données envoyées dans les requêtes POST / GET
 const createBookSchema = {
     type: 'object',

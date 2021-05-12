@@ -21,3 +21,16 @@ Content-type: application/json
     "author": "Georges Remi",
     "stars": 5
 }
+
+###
+
+PATCH http://localhost:3000/books/609b90dee4a77037687fc934
+Content-Type: application/json
+
+{
+    "author": "Georges Remi (Hergé)"
+}
+
+###
+
+DELETE http://localhost:3000/books/609a8f5e3304b415645c8db1
