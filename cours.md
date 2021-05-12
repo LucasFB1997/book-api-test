@@ -81,6 +81,23 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 - Pour les fonctions UPDATE on utilise le code 200(pour le développeur mobile) ou 206(pour l'efficacité)
 - Pour la fonctionnalité pour trouver un livre, on utilise le code 404 pour signaler que l'on ne trouve pas
 
+**Comment installer l'application**
+
+1. Cloner le projet
+```
+git clone https://github.com/LucasFB1997/book-api-test
+```
+
+2. Installer les dépendances
+```
+yarn install
+```
+
+3. Configurer l'application
+```
+
+```
+
 ######
 
 
@@ -223,4 +240,10 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
     1. `PATCH /books/:id`
     2. `DELETE /books/:id`
 2. Vous pouvez tester avec le fichier `api.http`
+3. On commit et on push
+
+## Exercice N°19 : Mettre de la configuration ##
+
+1. Créer un fichier `.env.dist` avec l'url MONGO_DB
+2. Ignorer le fichier `.env` dans le fichier `.gitignore`
 3. On commit et on push
