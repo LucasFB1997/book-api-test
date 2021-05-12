@@ -268,3 +268,9 @@ yarn install
 2. Importer le plugin dans `src/index.js`
 3. On enregistre le plugin dans `src/index.js`
 4. On commit et push
+
+## Exercice N°23 :  ##
+
+1. Dans le fichier `.env.dist` ajouter la valeur de configuration `HOST`
+2. Dans le fichier `src/index.js` et dans la fonction `app.listen` ajouter `process.env.HOST`
+3. On commit et on push

@@ -1,8 +1,9 @@
 // On importe la librairie "fastify"
 import fastify from "fastify"
 import fastifyMongo from 'fastify-mongodb'
-import { config } from 'dotenv'
 import fastifyCors from 'fastify-cors'
+import { config } from 'dotenv'
+
 
 config()
 
@@ -189,9 +190,9 @@ const start = async () => {
 
     console.log("Lancement du serveur")
 
-    await app.listen(process.env.PORT)
+    await app.listen(process.env.PORT, process.env.HOST)
 
-    console.log(`Le serveur est lancé, vous pouvez visiter: http://localhost:${process.env.PORT}`)
+    console.log(`Le serveur est lancé, vous pouvez visiter: http://${process.env.HOST}:${process.env.PORT}`)
 
 }
 // Lancement de la fonction de démarrage
