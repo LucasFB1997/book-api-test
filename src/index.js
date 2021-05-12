@@ -48,12 +48,22 @@ app.get('/books/:id', async (request) => {
 
     // On récupère notre collection mongodb
     const collection = app.mongo.db.collection('books')
-
+    
     // On va chercher un seul livre par son ID
-    const book = await collection.findOne({ _id: new app.mongo.ObjectId(id) })
+    try {
 
-    // On retourne notre livre
-    return book
+        const book = await collection.findOne({ _id: new app.mongo.ObjectId(id) })
+
+        return book
+
+    } catch(error) {
+
+        reply.status(404)
+
+        return { error: error.message }
+
+    }
+
 })
 
 
@@ -96,7 +106,7 @@ app.delete('/books/:id', async (request) => {
 
     // Chercher le livre à modifier
     await collection.deleteOne({
-        _id: new app.mongo.ObjectId(id) 
+        _id: new app.mongo.ObjectId(id)
     })
 
     return null
