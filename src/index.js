@@ -102,6 +102,7 @@ app.patch('/books/:id', async (request) => {
         { _id: new app.mongo.ObjectId(id) }
     )
 
+    // On retourne notre livre
     return updateBook
 
 })
@@ -120,6 +121,8 @@ app.delete('/books/:id', async (request) => {
     await collection.deleteOne({
         _id: new app.mongo.ObjectId(id)
     })
+
+    reply.status(204)
 
     return null
 

@@ -75,6 +75,12 @@ git clone URL NomDuRepertoire => copie projet github sur notre ordi
 - Dans le terminal entrer la commande `yarn add nodemon`, cela permettra de ne pas avoir à redémarrer le server à chaque modification
 
 
+**Partie sur les messages d'erreurs**
+
+- Pour les fonctions DELETE on utilise la grande majorité du temps le code 204
+- Pour les fonctions UPDATE on utilise le code 200(pour le développeur mobile) ou 206(pour l'efficacité)
+- Pour la fonctionnalité pour trouver un livre, on utilise le code 404 pour signaler que l'on ne trouve pas
+
 ######
 
 
